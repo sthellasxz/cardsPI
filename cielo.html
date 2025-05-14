@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Máquinas de Cartão</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 24px;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .card img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 12px;
+    }
+    .card ul {
+      padding-left: 0;
+      list-style: none;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-height: 150px;
+    }
+    .card li {
+      font-size: 0.95rem;
+      color: #555;
+      display: flex;
+      align-items: center;
+    }
+    .card li i {
+      margin-right: 8px;
+      color: #2e7d32;
+      min-width: 20px;
+      text-align: center;
+    }
+    .brand {
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Máquinas de Cartão de Crédito</h1>
+  <div class="container">
+
+    <div class="card">
+      <div class="brand">PagBank</div>
+      <img src="assets/img/maquinaparateste.png" alt="Moderninha Pro">
+      <h2>Moderninha Pro</h2>
+      <ul>
+        <li><i class="fas fa-wifi"></i> Conexão 4G e Wi-Fi</li>
+        <li><i class="fas fa-mobile-alt"></i> Aproximação e link de pagamento</li>
+        <li><i class="fas fa-qrcode"></i> Pix QR Code grátis</li>
+        <li><i class="fas fa-receipt"></i> Comprovante impresso</li>
+        <li><i class="fas fa-battery-full"></i> Bateria de longa duração</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="brand">Stone</div>
+      <img src="assets/img/front@2x.png" alt="POS Máquina Verde">
+      <h2>POS Máquina Verde</h2>
+      <ul>
+        <li><i class="fas fa-wifi"></i> Wi-Fi e chip 3G</li>
+        <li><i class="fas fa-mobile-alt"></i> Pagamento por aproximação</li>
+        <li><i class="fas fa-chart-line"></i> App de gestão incluso</li>
+        <li><i class="fas fa-receipt"></i> Comprovante impresso</li>
+        <li><i class="fas fa-bolt"></i> Bateria potente</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="brand">Cielo</div>
+      <img src="assets/img/superget-com-chip-wifi.webp" alt="Cielo Flash">
+      <h2>Cielo Flash</h2>
+      <ul>
+        <li><i class="fas fa-wifi"></i> Conexão Wi-Fi e chip</li>
+        <li><i class="fas fa-wave-square"></i> Pagamento por aproximação</li>
+        <li><i class="fas fa-receipt"></i> Comprovante impresso</li>
+        <li><i class="fas fa-tv"></i> Tela sensível ao toque</li>
+        <li><i class="fas fa-battery-three-quarters"></i> Bateria duradoura</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="brand">Mercado Pago</div>
+      <img src="assets/img/Point-Pro-2_ML-maquininha-mercado-pago.png" alt="Point Pro 2">
+      <h2>Point Pro 2</h2>
+      <ul>
+        <li><i class="fas fa-sim-card"></i> Chip e Wi-Fi</li>
+        <li><i class="fas fa-qrcode"></i> Pix e QR Code</li>
+        <li><i class="fas fa-print"></i> Imprime comprovante</li>
+        <li><i class="fas fa-mobile-alt"></i> App completo</li>
+        <li><i class="fas fa-battery-full"></i> Bateria o dia todo</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="brand">InfinityPay</div>
+      <img src="assets/img/moderninha-pro.png" alt="Infinity Smart">
+      <h2>Infinity Smart</h2>
+      <ul>
+        <li><i class="fas fa-credit-card"></i> Aceita Pix, débito, crédito e voucher</li>
+        <li><i class="fas fa-chart-line"></i> Gestão pelo app</li>
+        <li><i class="fas fa-bolt"></i> Pagamentos rápidos</li>
+        <li><i class="fas fa-wifi"></i> Conectividade moderna</li>
+        <li><i class="fas fa-receipt"></i> Comprovante impresso</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="brand">Getnet</div>
+      <img src="assets/img/point_pro_2_mercado_pago_93_1_248c29b758b666a94ca16e7329c44d92.webp" alt="SuperGet com Chip">
+      <h2>SuperGet com Chip</h2>
+      <ul>
+        <li><i class="fas fa-money-bill-wave"></i> Sem mensalidade</li>
+        <li><i class="fas fa-wifi"></i> Wi-Fi e chip</li>
+        <li><i class="fas fa-chart-line"></i> App de gestão</li>
+        <li><i class="fas fa-mobile-alt"></i> Recarga de celular</li>
+        <li><i class="fas fa-credit-card"></i> Aceita diversas bandeiras</li>
+      </ul>
+    </div>
+
+  </div>
+</body>

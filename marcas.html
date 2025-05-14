@@ -5,52 +5,206 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marcas</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    body.marcas {
+      height: 100%;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      background-color: #DAD7CD;
+      font-family: Arial, sans-serif;
+    }
+
+    .cards-container {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .cards-row {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 280px;
+      flex-shrink: 0;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    .card-title {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      color: #000000;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      color: #000000;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-button {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #588157;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Responsivo */
+    @media (max-width: 1024px) {
+      .card {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body class="marcas">
- 
+
   <div id="navbar-container"></div>
+  <script src="assets/js/navbar.js" defer></script>  
 
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/navbar.js" defer></script> 
-<br> <br> <br> <br> <br> <br> <br>
-    <div class="cards-container">
+  <br><br><br><br><br><br><br>
 
-    <div class="card">
-      <img src="assets/img/logopagbank.png" alt="Imagem do Card" />
-      <div class="card-content">
-        <h2 class="card-title">PagBank</h2>
-        <p class="card-text">Aceita pagamentos por NFC, QR Code e aproximação. Oferece uma conta digital gratuita com rendimento superior à poupança.</p>
-        <br>
-        <a href="#" class="card-button">Saiba Mais</a>
+  <div class="cards-container">
+
+    <div class="cards-row"> <!-- container -->
+      <div class="card">
+        <img src="assets/img/logopagbank.png" alt="PagBank" />
+        <div class="card-content">
+          <h2 class="card-title">PagBank</h2>
+          <p class="card-text">Aceita pagamentos por NFC, QR Code e aproximação. Oferece uma conta digital gratuita com rendimento superior à poupança.</p>
+          <a href="pagbank.html" class="card-button">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/logocielo1.png" alt="Cielo" />
+        <div class="card-content">
+          <h2 class="card-title">Cielo</h2>
+          <p class="card-text">Aceita mais de 80 bandeiras, Pix, QR Code, débito, crédito e vouchers. Não precisa de celular para operar e integra com sistemas de gestão.</p>
+          <a href="cielo.html" class="card-button">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/logostone.png" alt="Stone" />
+        <div class="card-content">
+          <h2 class="card-title">Stone</h2>
+          <p class="card-text">Aceita Pix, débito, crédito, voucher e carteiras digitais. Oferece atendimento rápido e uma conta digital com cartão de crédito.</p>
+          <a href="stone.html" class="card-button">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/logoinfinitepay.png" alt="InfinitePay" />
+        <div class="card-content">
+          <h2 class="card-title">InfinitePay</h2>
+          <p class="card-text">Aceita Pix, débito, crédito (à vista e parcelado) e NFC. Não cobra aluguel ou mensalidade e oferece cashback de 1,5% na função crédito.</p>
+          <a href="#" class="card-button">Saiba Mais</a>
+        </div>
+      </div>
     </div>
+
+    <div class="cards-row"> <!-- container -->
+      <div class="card">
+        <img src="assets/img/logosumup.png" alt="SumUp" />
+        <div class="card-content">
+          <h2 class="card-title">SumUp</h2>
+          <p class="card-text">Empresa global de soluções de pagamento para pequenos negócios.</p>
+          <a href="#" class="card-button">Saiba Mais</a>
+        </div>
       </div>
 
-    <div class="card">
-      <img src="assets/img/logocielo1.png" alt="Imagem do Card" />
-      <div class="card-content">
-        <h2 class="card-title">Cielo</h2>
-        <p class="card-text">Aceita mais de 80 bandeiras, Pix, QR Code, débito, crédito e vouchers. Não precisa de celular para operar e integra com sistemas de gestão.</p>
-        <a href="#" class="card-button">Saiba Mais</a>
+      <div class="card">
+        <img src="assets/img/logomercadopago.png" alt="Mercado Pago" />
+        <div class="card-content">
+          <h2 class="card-title">Mercado Pago</h2>
+          <p class="card-text">Plataforma de pagamento do Mercado Livre, para vendas físicas e online.</p>
+          <a href="#" class="card-button">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/logosafrapay.png" alt="SafraPay" />
+        <div class="card-content">
+          <h2 class="card-title">SafraPay</h2>
+          <p class="card-text">Parte do Banco Safra, oferece soluções para pequenos e grandes negócios.</p>
+          <a href="#" class="card-button">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/logogetnet.png" alt="Getnet" />
+        <div class="card-content">
+          <h2 class="card-title">Getnet</h2>
+          <p class="card-text">Grupo Santander, atua com soluções completas de pagamento.</p>
+          <a href="getnet.html" class="card-button">Saiba Mais</a>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <img src="assets/img/logostone.png" alt="Imagem do Card" />
-      <div class="card-content">
-        <h2 class="card-title">Stone</h2>
-        <p class="card-text">Aceita Pix, débito, crédito, voucher e carteiras digitais. Oferece atendimento rápido e uma conta digital com cartão de crédito.</p>
-        <br>
-        <a href="#" class="card-button">Saiba Mais</a>
+    <div class="cards-row"> <!-- container -->
+      <div class="card">
+        <img src="assets/img/logobin.png" alt="Bin" />
+        <div class="card-content">
+          <h2 class="card-title">Bin</h2>
+          <p class="card-text">Soluções de pagamento para empresas de diversos segmentos.</p>
+          <a href="#" class="card-button">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/logotonavibe.png" alt="Tô na Vibe" />
+        <div class="card-content">
+          <h2 class="card-title">Ton</h2>
+          <p class="card-text">Serviços de pagamento pensados para pequenos negócios e autônomos.</p>
+          <a href="#" class="card-button">Saiba Mais</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/logotonavibe.png" alt="Tô na Vibe" />
+        <div class="card-content">
+          <h2 class="card-title">Ton</h2>
+          <p class="card-text">Serviços de pagamento pensados para pequenos negócios e autônomos.</p>
+          <a href="#" class="card-button">Saiba Mais</a>
+        </div>
       </div>
     </div>
-
-    <div class="card">
-      <img src="assets/img/logoinfinitepay.png" alt="Imagem do Card" />
-      <div class="card-content">
-        <h2 class="card-title">InfinitePay</h2>
-        <p class="card-text">Aceita Pix, débito, crédito (à vista e parcelado) e NFC. Não cobra aluguel ou mensalidade e oferece cashback de 1,5% na função crédito. </p>
-        <a href="#" class="card-button">Saiba Mais</a>
-      </div>
     </div>
 
   </div>
