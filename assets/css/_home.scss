@@ -1,72 +1,254 @@
-/* Resetando as margens e o preenchimento para todos os elementos */
-* {
+.marcas {
+  height: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: #DAD7CD;
 }
 
-/* Estilo para os links (a) */
-a {
-  font-family: sans-serif; /* Define a fonte como sans-serif */
-  text-decoration: none; /* Remove o sublinhado dos links */
-  color: rgb(0, 0, 0); /* Define a cor do texto do link como preto */
+.cards-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 1rem;
 }
 
-/* Estilo para o cabeçalho (header) */
-.header {
-  background-color: rgb(255, 255, 255); /* Cor de fundo branca */
-  padding-inline: 16px; /* Adiciona 16px de preenchimento nas laterais */
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 280px;
+  flex-shrink: 0;
+  cursor: pointer;
 }
 
-
-/* Estilo para a imagem da logo */
-.logo-img {
-  width: 80px; /* Define a largura da imagem da logo como 80px */
-  height: auto; /* Mantém a proporção da imagem */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: #333333;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.card-button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #3C7457;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.card-button:hover {
+  background-color: #2F5D45;
+}
 
 .conteudo {
-
-  position: absolute;
-  top: 50%;
-  right: 30%;
-  left: 18%;
-  transform: translate(-30%, -100%);
-  font-size: 50px;
-  font-weight: bold;
+  padding: 4rem 5%;
+  max-width: 800px;
 }
 
-  .frase {
-      opacity: 0;
-      transform: translateX(-50px);
-      animation: slideIn 1.5s ease-out forwards;
-      font-size: 75px;
-      color: #333;
-  }
- 
-  @keyframes slideIn {
-      from {
-          opacity: 0;
-          transform: translateX(-50px);
-      }
-      to {
-          opacity: 1;
-          transform: translateX(0);
-      }
-  }
+.frase {
+  font-size: 2.8rem;
+  font-weight: bold;
+  line-height: 1.3;
+  color: #222;
+}
 
+.verde {
+  color: #3C7457;
+}
 
 .imagem-frase {
-  width: 200%;
-  max-width: 700px;
+  text-align: left;
+  padding: 2rem 5%;
+}
+
+.imagem-frase img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+
+.faixa-verde-topo {
+  background-color: #3C7457;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-unico {
+  width: 100%;
+  max-width: 1300px;
+}
+
+.banner-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(80px);
+}
+
+.banner-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.texto-centralizado {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1rem; /* 🔽 reduzido ainda mais */
+  font-weight: bold;
+  max-width: 90%;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  text-align: center;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .texto-centralizado {
+    font-size: 1.4rem;
+    bottom: 15px;
+    left: 20px;
+  }
+
+  .banner-img {
+    height: 250px;
+  }
+
+  .banner-unico {
+    max-width: 100%;
+  }
+}
+
+.informativo-site {
+  background-color: #ffffff;
+  padding: 60px 30px;
+  font-family: 'Arial', sans-serif;
+  color: #1e1e1e;
+}
+
+.container-informativo {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.informativo-intro {
+  margin-bottom: 40px;
+}
+
+.informativo-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1e1e1e;
+}
+
+.informativo-intro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.cards-informativos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
   margin-top: 20px;
-  margin-left: -760px; /* Ajuste conforme necessário */
-  transform: translateX(-50px);
-  animation: slideIn 1.5s ease-out forwards ;
 }
 
- 
-.verde {
-  color: #4CAF50;
+.card-info {
+  background-color: #f6f9f6;
+  border: 1px solid #dde5dd;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
 }
 
+.card-info:hover {
+  transform: translateY(-4px);
+}
+
+.card-info h3 {
+  color: #3C7457;
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+
+.card-info ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+  display: block;
+}
+
+.card-info li {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  text-align: left;
+  word-break: break-word;
+}
+
+.botao-marcas-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.botao-marcas {
+  display: inline-block;
+  background-color: #3C7457;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botao-marcas:hover {
+  background-color: #2F5D45;
+  transform: translateY(-2px);
+}

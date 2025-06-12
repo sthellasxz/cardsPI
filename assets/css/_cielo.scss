@@ -1,0 +1,167 @@
+.cielo {
+  font-family: Arial, sans-serif;
+  background-color: #e6f2ec;
+}
+
+/* Título principal */
+.h1cielo {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2e5744;
+}
+
+/* Container dos cards */
+.containercielo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Card individual */
+.cardcielo {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* imagem e h2 centralizados */
+}
+
+.cardcielo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.cardcielo img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+/* Título */
+.cardcielo h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #2e5744;
+  text-align: center;
+}
+
+/* Marca */
+.brandcielo {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #888888;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Lista de recursos */
+.cardcielo ul {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 150px;
+  width: 100%; /* ul ocupa largura do card */
+  text-align: left; /* texto da lista alinhado à esquerda */
+}
+
+.cardcielo li {
+  font-size: 0.95rem;
+  color: #444444;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.cardcielo li i {
+  margin-right: 8px;
+  color: #4caf50;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Card horizontal */
+.horizontal-cardcielo {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin: 40px 0;
+  width: 100%; /* ocupa largura da fullwidth-container */
+  padding: 20px;
+  gap: 20px;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.horizontal-imgcielo {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.horizontal-contentcielo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.horizontal-titlecielo {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #3c7457;
+}
+
+.horizontal-textcielo {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.horizontal-listcielo {
+  list-style: none;
+  padding: 0;
+  color: #444;
+  text-align: left;
+}
+
+.horizontal-listcielo li {
+  margin-bottom: 6px;
+}
+
+/* Container de largura total */
+.fullwidth-container {
+  width: 63vw;
+  margin: 0 auto; /* CENTRALIZA no meio */
+  padding: 0;
+}
+
+/* Botão */
+.horizontalbotao {
+  display: inline-block;
+  background-color: #3C7457;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1.2;
+  border-radius: 999px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  padding: 0.8rem 0.9rem;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
